@@ -1,0 +1,12 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ run Makefile",
+            "command": "make",
+            "options": {
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
