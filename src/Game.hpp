@@ -6,14 +6,16 @@ class Game
 {
     public:
         char getPlayer();
-        void setPlayer();
+        void setPlayer(char);
 
         int getTurns();
 
         Board getBoard();
 
         void takeTurn(char);
-        bool checkWin(char);
+        bool checkWin();
+        
+        void startGame();
 
         friend std::ostream operator<<(std::ostream&, Game);
     private:
