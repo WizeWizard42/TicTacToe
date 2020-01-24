@@ -17,11 +17,11 @@ class Game
         
         void startGame();
 
-        friend std::ostream operator<<(std::ostream&, Game);
+        friend std::ostream& operator<<(std::ostream&, const Game&);
     private:
         char player_;
         int turns_;
         Board board_;
 };
 
-std::ostream operator<<(std::ostream&, Game);
+std::ostream& operator<<(std::ostream&, const Game&);
