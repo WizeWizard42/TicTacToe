@@ -8,4 +8,6 @@ using std::endl;
 
 int main()
 {
+    Game game = Game();
+    cout << game << endl;
 }

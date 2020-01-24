@@ -11,6 +11,11 @@ int Game::getTurns() {return turns_;}
 
 Board Game::getBoard() {return board_;}
 
+bool Game::checkWin()
+{
+    return true;
+}
+
 std::ostream& operator<<(std::ostream& os, const Game& game)
 {
     os << game.board_ << endl;
