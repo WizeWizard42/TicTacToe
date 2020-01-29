@@ -1,6 +1,5 @@
 #include "Board.hpp"
 #include <array>
-#include <algorithm>
 #include <iostream>
 
 using std::cout;
@@ -26,19 +25,6 @@ int Board::setTile(int x, int y, char XorO)
     }
     cout << "Error: Cell is already filled with X or O, or you attempted to fill a cell with something other than an X or O!" << endl;
     return 1;
-}
-
-bool Board::checkWin(char XorO)
-{
-    cout << "Current player is: " << XorO << endl;
-    
-    for (std::array<char, 3> it : board_) if (it[0] == XorO && it[1] == XorO && it[2] == XorO) return true;
-    
-    for (unsigned int i = 0; i < board_.size(); i++) if (board_[0][i] == XorO && board_[1][i] == XorO && board_[2][i] == XorO) return true;
-    
-    if ((board_[0][0] == XorO && board_[1][1] == XorO && board_[2][2] == XorO) || (board_[0][2] == XorO && board_[1][1] == XorO && board_[2][0] == XorO)) return true;
-    
-    return false;
 }
 
 std::ostream& operator<<(std::ostream& os, const Board& board)
