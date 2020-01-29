@@ -1,11 +1,13 @@
-#pragma once
+#ifndef GAME_HPP
+#define GAME_HPP
+
 #include "Board.hpp"
 #include <ostream>
 
 class Game
 {
     public:
-        char getPlayer();
+        char getPlayer ();
         void setPlayer(char);
 
         int getTurns();
@@ -25,3 +27,5 @@ class Game
 };
 
 std::ostream& operator<<(std::ostream&, const Game&);
+
+#endif // GAME_HPP
